@@ -1,0 +1,45 @@
+.main-container_homepage{
+    background-color: #48a899;
+   
+background-image: url("https://www.transparenttextures.com/patterns/diagmonds-light.png");
+
+}
+nav{
+    display: flex;
+    justify-content: space-evenly;
+    color: white;
+    font-weight: 500;
+    padding: 40px 0px;
+
+}
+
+h1{
+    font-size: 3.2rem;
+}
+h2{
+    width: 60%;
+}
+a:hover{
+    color: #f6ccc3;
+    font-weight: 800;
+}
+.wrapper-homepage{
+    display: flex;
+    justify-content: space-evenly;
+    padding: 100px 0px;
+}
+.headers-homepage{
+color: white;
+text-align: left;
+}
+.image-container_homepage{
+    background-color: #f4b4b7;
+    width: 350px;
+    height: 350px;
+    border-radius: 50%;
+    margin-right: 60px;
+    
+    
+
+
+}
