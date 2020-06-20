@@ -31,15 +31,11 @@ a:hover{
 .headers-homepage{
 color: white;
 text-align: left;
+width: 40%;
 }
-.image-container_homepage{
-    background-color: #f4b4b7;
-    width: 350px;
-    height: 350px;
-    border-radius: 50%;
-    margin-right: 60px;
-    
-    
 
-
+.image-coffee-homepage {
+    position: relative;
+    right: 100px;
+    
 }
