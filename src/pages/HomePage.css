@@ -43,3 +43,9 @@ text-align: left;
 
 
 }
+.image-container_homepage img{
+    width: 400px;
+    height: 400px;
+    background-color: #f4b4b7;
+    color: #f4b4b7;
+}
