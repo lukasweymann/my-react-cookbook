@@ -1,0 +1,42 @@
+.essentials-list {
+  display: flex;
+  flex-direction: column;
+  border: 1px solid grey;
+  border-radius: 5px;
+  padding: 25px;
+  cursor: pointer;
+  -moz-osx-font-smoothing: grayscale;
+  backface-visibility: hidden;
+  transform: translateZ(0);
+  transition: transform 0.25s ease-out;
+  text-align: center;
+  opacity: 0.8;
+}
+
+.essential-card {
+  text-align: center;
+  width: 40%;
+}
+
+pre {
+  width: 85vw;
+  margin: 0 auto;
+  display: grid;
+  grid-template-columns: 1fr 1fr 1fr 1fr;
+  gap: 40px;
+}
+
+h1 {
+  font-family: Libre Franklin;
+  font-weight: 400;
+  text-transform: uppercase;
+  font-size: 30px;
+}
+
+h2 {
+  font-family: Libre Franklin;
+  font-weight: 300;
+  font-size: 25px;
+  margin: 0 auto;
+  overflow-wrap: break-word;
+}
