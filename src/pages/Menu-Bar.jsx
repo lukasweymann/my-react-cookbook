@@ -1,39 +1,44 @@
-import React from 'react';
-import './Menu-Bar.css';
-import clsx from 'clsx';
-import { makeStyles, useTheme } from '@material-ui/core/styles';
-import Drawer from '@material-ui/core/Drawer';
-import AppBar from '@material-ui/core/AppBar';
-import Toolbar from '@material-ui/core/Toolbar';
-import CssBaseline from '@material-ui/core/CssBaseline';
-import List from '@material-ui/core/List';
-import Typography from '@material-ui/core/Typography';
-import Divider from '@material-ui/core/Divider';
-import IconButton from '@material-ui/core/IconButton';
-import MenuIcon from '@material-ui/icons/Menu';
-import ChevronLeftIcon from '@material-ui/icons/ChevronLeft';
-import ChevronRightIcon from '@material-ui/icons/ChevronRight';
-import ListItem from '@material-ui/core/ListItem';
-import ListItemIcon from '@material-ui/core/ListItemIcon';
-import ListItemText from '@material-ui/core/ListItemText';
-import InboxIcon from '@material-ui/icons/MoveToInbox';
-import MailIcon from '@material-ui/icons/Mail';
+import React from "react";
+import "./Menu-Bar.css";
+import clsx from "clsx";
+import { makeStyles, useTheme } from "@material-ui/core/styles";
+import Drawer from "@material-ui/core/Drawer";
+import AppBar from "@material-ui/core/AppBar";
+import Toolbar from "@material-ui/core/Toolbar";
+import CssBaseline from "@material-ui/core/CssBaseline";
+import List from "@material-ui/core/List";
+import Typography from "@material-ui/core/Typography";
+import Divider from "@material-ui/core/Divider";
+import IconButton from "@material-ui/core/IconButton";
+import MenuIcon from "@material-ui/icons/Menu";
+import ChevronLeftIcon from "@material-ui/icons/ChevronLeft";
+import ChevronRightIcon from "@material-ui/icons/ChevronRight";
+import ListItem from "@material-ui/core/ListItem";
+import ListItemText from "@material-ui/core/ListItemText";
+import EssentialsListContainer from './Essentials';
+import {
+  BrowserRouter as Router,
+  Switch,
+  Route,
+  Link,
+} from "react-router-dom";
+
 
 const drawerWidth = 240;
 
 const useStyles = makeStyles((theme) => ({
   root: {
-    display: 'flex',
+    display: "flex",
   },
   appBar: {
-    transition: theme.transitions.create(['margin', 'width'], {
+    transition: theme.transitions.create(["margin", "width"], {
       easing: theme.transitions.easing.sharp,
       duration: theme.transitions.duration.leavingScreen,
     }),
   },
   appBarShift: {
     width: `calc(100% - ${drawerWidth}px)`,
-    transition: theme.transitions.create(['margin', 'width'], {
+    transition: theme.transitions.create(["margin", "width"], {
       easing: theme.transitions.easing.easeOut,
       duration: theme.transitions.duration.enteringScreen,
     }),
@@ -43,7 +48,7 @@ const useStyles = makeStyles((theme) => ({
     flexGrow: 1,
   },
   hide: {
-    display: 'none',
+    display: "none",
   },
   drawer: {
     width: drawerWidth,
@@ -53,24 +58,24 @@ const useStyles = makeStyles((theme) => ({
     width: drawerWidth,
   },
   drawerHeader: {
-    display: 'flex',
-    alignItems: 'center',
+    display: "flex",
+    alignItems: "center",
     padding: theme.spacing(0, 1),
     // necessary for content to be below app bar
     ...theme.mixins.toolbar,
-    justifyContent: 'flex-start',
+    justifyContent: "flex-start",
   },
   content: {
     flexGrow: 1,
     padding: theme.spacing(3),
-    transition: theme.transitions.create('margin', {
+    transition: theme.transitions.create("margin", {
       easing: theme.transitions.easing.sharp,
       duration: theme.transitions.duration.leavingScreen,
     }),
     marginRight: -drawerWidth,
   },
   contentShift: {
-    transition: theme.transitions.create('margin', {
+    transition: theme.transitions.create("margin", {
       easing: theme.transitions.easing.easeOut,
       duration: theme.transitions.duration.enteringScreen,
     }),
@@ -95,28 +100,30 @@ export default function PersistentDrawerRight() {
     <div className={classes.root}>
       <CssBaseline />
       <AppBar
-     
-      style={{backgroundImage: "url(https://www.transparenttextures.com/patterns/diagmonds-light.png)", backgroundColor:  "#48a899" }}
+        style={{
+          backgroundImage:
+            "url(https://www.transparenttextures.com/patterns/diagmonds-light.png)",
+          backgroundColor: "#48a899",
+        }}
         position="fixed"
-        
         className={clsx(classes.appBar, {
           [classes.appBarShift]: open,
         })}
       >
         <Toolbar>
-        <Typography variant="h6" noWrap className={classes.title}>
-        
-      </Typography>
+          <Typography
+            variant="h6"
+            noWrap
+            className={classes.title}
+          ></Typography>
           <IconButton
-          
             color="inherit"
             aria-label="open drawer"
             edge="end"
             onClick={handleDrawerOpen}
             className={clsx(open && classes.hide)}
           >
-            <MenuIcon 
-            style={{fontSize: "2rem"}}/>
+            <MenuIcon style={{ fontSize: "2rem" }} />
           </IconButton>
         </Toolbar>
       </AppBar>
@@ -126,7 +133,6 @@ export default function PersistentDrawerRight() {
         })}
       >
         <div className={classes.drawerHeader} />
-        
       </main>
       <Drawer
         className={classes.drawer}
@@ -139,31 +145,39 @@ export default function PersistentDrawerRight() {
       >
         <div className={classes.drawerHeader}>
           <IconButton onClick={handleDrawerClose}>
-            {theme.direction === 'rtl' ? <ChevronLeftIcon /> : <ChevronRightIcon />}
+            {theme.direction === "rtl" ? (
+              <ChevronLeftIcon />
+            ) : (
+              <ChevronRightIcon />
+            )}
           </IconButton>
         </div>
         <Divider />
+        <Router>
         <List>
-          {['ESSENTIALS', 'VARIETIES', 'CAFÉS', 'LEARN'].map((text, index) => (
-            <ListItem button key={text}
-            style={{marginLeft: "10px"}}
-            >
-              
+          {["ESSENTIALS", "VARIETIES", "CAFÉS", "LEARN"].map((text, index) => (
+            <Link to={ "/" + text.toLowerCase() }>
+            <ListItem button key={text} style={{ marginLeft: "10px" }}>
               <ListItemText primary={text} />
             </ListItem>
+            </Link>
           ))}
         </List>
         <Divider />
         <List>
-          {['Home', 'About', 'Contact'].map((text, index) => (
-            <ListItem button key={text}
-            style={{marginLeft: "10px"}}
-            >
-              
+          {["Home", "About", "Contact"].map((text, index) => (
+            <ListItem button key={text} style={{ marginLeft: "10px" }}>
               <ListItemText primary={text} />
             </ListItem>
           ))}
         </List>
+       
+        <Switch>
+        <Route path="/essentials">
+        <EssentialsListContainer/>
+        </Route>
+        </Switch>
+        </Router>
       </Drawer>
     </div>
   );
