@@ -15,7 +15,7 @@ import ChevronLeftIcon from "@material-ui/icons/ChevronLeft";
 import ChevronRightIcon from "@material-ui/icons/ChevronRight";
 import ListItem from "@material-ui/core/ListItem";
 import ListItemText from "@material-ui/core/ListItemText";
-import EssentialsListContainer from './Essentials';
+
 import {
   BrowserRouter as Router,
   Switch,
@@ -153,7 +153,7 @@ export default function PersistentDrawerRight() {
           </IconButton>
         </div>
         <Divider />
-        <Router>
+        
         <List>
           {["ESSENTIALS", "VARIETIES", "CAFÉS", "LEARN"].map((text, index) => (
             <Link to={ "/" + text.toLowerCase() }>
@@ -172,12 +172,6 @@ export default function PersistentDrawerRight() {
           ))}
         </List>
        
-        <Switch>
-        <Route path="/essentials">
-        <EssentialsListContainer/>
-        </Route>
-        </Switch>
-        </Router>
       </Drawer>
     </div>
   );
