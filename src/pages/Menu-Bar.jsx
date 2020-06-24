@@ -156,7 +156,7 @@ export default function PersistentDrawerRight() {
         
         <List>
           {["ESSENTIALS", "VARIETIES", "CAFÉS", "LEARN"].map((text, index) => (
-            <Link to={ "/" + text.toLowerCase() }>
+            <Link to={ "/" + text.toLowerCase() } style={{textDecoration: 'none', color: 'black'}}>
             <ListItem button key={text} style={{ marginLeft: "10px" }}>
               <ListItemText primary={text} />
             </ListItem>
