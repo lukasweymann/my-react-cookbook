@@ -1,6 +1,8 @@
 import React from 'react';
 import HomePage from './pages/HomePage';
 import AboutPage from './pages/AboutPage';
+import ContactPage from './pages/ContactPage';
+
 import EssentialsListContainer from './pages/Essentials';
 import './App.css';
 import {
@@ -23,7 +25,12 @@ function App() {
       <EssentialsListContainer/>
       </Route>
       <Route path='/about'>
+      
       <AboutPage/>
+      </Route>
+      <Route path='/contact'>
+      
+      <ContactPage/>
       </Route>
      
       </Switch>
