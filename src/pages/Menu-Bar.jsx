@@ -166,9 +166,11 @@ export default function PersistentDrawerRight() {
         <Divider />
         <List>
           {["Home", "About", "Contact"].map((text, index) => (
+            <Link to={ "/" + text.toLowerCase() } style={{textDecoration: 'none', color: 'black'}}>
             <ListItem button key={text} style={{ marginLeft: "10px" }}>
               <ListItemText primary={text} />
             </ListItem>
+            </Link>
           ))}
         </List>
        
