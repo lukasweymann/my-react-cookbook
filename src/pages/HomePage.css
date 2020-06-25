@@ -4,14 +4,6 @@
 background-image: url("https://www.transparenttextures.com/patterns/diagmonds-light.png");
 
 }
-nav{
-    display: flex;
-    justify-content: space-evenly;
-    color: white;
-    font-weight: 500;
-    padding: 40px 0px;
-
-}
 
 h1{
     font-size: 3.2rem;
@@ -31,15 +23,31 @@ a:hover{
 .headers-homepage{
 color: white;
 text-align: left;
+width: 40%;
 }
-.image-container_homepage{
-    background-color: #f4b4b7;
-    width: 350px;
-    height: 350px;
-    border-radius: 50%;
-    margin-right: 60px;
-    
-    
 
-
+.image-coffee-homepage {
+    position: relative;
+    right: 100px;
+    
+}
+@media only screen and (max-width: 600px) {
+    .headers-homepage{
+        font-size: 0.5em;
+        padding:0;
+    }
+    .wrapper-homepage{
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+    }
+    .headers-homepage > h2{
+       display: none;
+   }
+    .image-coffee-homepage{
+        width: 400px;
+        height: 300px;
+        position: static;
+      
+    }
 }
