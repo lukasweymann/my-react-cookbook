@@ -4,6 +4,7 @@ import AboutPage from './pages/AboutPage';
 import ContactPage from './pages/ContactPage';
 
 import EssentialsListContainer from './pages/Essentials';
+import VarietiesListContainer from './pages/Varieties';
 import './App.css';
 import {
   BrowserRouter as Router,
@@ -32,7 +33,9 @@ function App() {
       
       <ContactPage/>
       </Route>
-     
+     <Route>
+     <VarietiesListContainer/>
+     </Route>
       </Switch>
       </Router>
     </div>
