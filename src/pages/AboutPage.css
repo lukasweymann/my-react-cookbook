@@ -1,4 +1,4 @@
-.main-container_homepage{
+.main-container_aboutpage{
     background-color: #48a899;
    
 background-image: url("https://www.transparenttextures.com/patterns/diagmonds-light.png");
@@ -15,22 +15,17 @@ a:hover{
     color: #f6ccc3;
     font-weight: 800;
 }
-.wrapper-homepage{
+.wrapper-aboutpage{
     display: flex;
     justify-content: space-evenly;
     padding: 100px 0px;
 }
-.headers-homepage{
+.headers-aboutpage{
 color: white;
 text-align: left;
 width: 40%;
 }
 
-.image-coffee-homepage {
-    position: relative;
-    right: 100px;
-    
-}
 @media only screen and (max-width: 600px) {
     .headers-homepage{
         font-size: 0.5em;
