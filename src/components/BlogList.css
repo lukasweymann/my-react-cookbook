@@ -1,0 +1,47 @@
+.blog-wrapper {
+  display: flex;
+  flex-direction: column;
+  font-family: Libre Franklin;
+}
+
+.blog-card {
+  display: flex;
+  margin: 50px 100px;
+  padding: 10px;
+  border: 1px solid grey;
+  border-radius: 5px;
+}
+
+.info-blog-card { 
+  text-align: left;
+  margin-left: 40px;
+
+}
+
+.main-container-blog-list--h1 {
+  margin-bottom: 10px;
+  text-align: left;
+  margin-left: 112px;
+}
+  
+.main-container-blog-list--text {
+  width: 90%;
+  text-align: left;
+  margin-left: 112px;
+}
+
+.blog-article__author, .blog-article__date {
+  margin: none !important;
+  font-weight: 700;
+  text-align: left;
+}
+
+h1 {
+  font-size: 30px;
+  font-weight: 500;
+  text-transform: uppercase;
+}
+
+.blog-article__read {
+  text-decoration: none;
+}

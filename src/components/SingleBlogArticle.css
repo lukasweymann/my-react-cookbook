@@ -1,0 +1,26 @@
+
+.single-blog-article__wrapper {
+  display: flex;
+  flex-direction: column;
+  font-family: Libre Franklin;
+}
+
+.blog-card{
+  display: flex;
+  margin: 50px 100px;
+  padding: 10px;
+  border: 1px solid grey;
+  border-radius: 5px;
+}
+
+.blog-article__author, .blog-article__date {
+  margin: none !important;
+  font-weight: 700;
+  text-align: left;
+}
+
+h1 {
+  font-size: 30px;
+  font-weight: 500;
+  text-transform: uppercase;
+}
