@@ -5,16 +5,14 @@ background-image: url("https://www.transparenttextures.com/patterns/diagmonds-li
 
 }
 
-h1{
+.headers-homepage__h1 {
     font-size: 3.2rem;
 }
-h2{
+
+.headers-homepage__h2 {
     width: 60%;
 }
-a:hover{
-    color: #f6ccc3;
-    font-weight: 800;
-}
+
 .wrapper-homepage{
     display: flex;
     justify-content: space-evenly;
@@ -41,7 +39,7 @@ width: 40%;
         flex-direction: column;
         justify-content: center;
     }
-    .headers-homepage > h2{
+    .headers-homepage__h2 {
        display: none;
    }
     .image-coffee-homepage{

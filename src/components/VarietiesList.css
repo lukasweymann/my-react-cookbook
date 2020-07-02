@@ -25,18 +25,25 @@
     text-align: left;
     margin-left: 112px;
   }
+
+.main-container-varieties-list__content {
+  font-size: 18px;
+  margin-bottom: 100px;
+  margin-left: 112px;
+}
   
-.info-variety-card > p{
+.varieties-description {
   width: 90%;
 }
 .varieties-price{
   margin: none !important;
 }
-  h1 {
+
+.info-variety-card__h1{
     font-size: 30px;
     font-weight: 500;
     text-transform: uppercase;
-  }
+}
   
   .varieties-price {
     font-weight: 400;
