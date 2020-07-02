@@ -5,6 +5,7 @@ import ContactPage from './pages/ContactPage';
 
 import EssentialsListContainer from './pages/Essentials';
 import VarietiesListContainer from './pages/Varieties';
+import BlogRoutes from './BlogRoutes';
 import './App.css';
 import {
   BrowserRouter as Router,
@@ -17,26 +18,29 @@ import {
 function App() {
   return (
     <div className="App">
-    <Router>
-    <Switch>
-    <Route path='/home'>
-      <HomePage/>
-      </Route>
-      <Route path='/essentials'>
-      <EssentialsListContainer/>
-      </Route>
-      <Route path='/about'>
-      
-      <AboutPage/>
-      </Route>
-      <Route path='/contact'>
-      
-      <ContactPage/>
-      </Route>
-     <Route>
-     <VarietiesListContainer/>
-     </Route>
-      </Switch>
+      <Router>
+        <Switch>
+          <Route path='/home'>
+            <HomePage />
+          </Route>
+          <Route path='/essentials'>
+            <EssentialsListContainer />
+          </Route>
+          <Route path='/learn'>
+            <BlogRoutes />
+          </Route>
+          <Route path='/about'>
+
+            <AboutPage />
+          </Route>
+          <Route path='/contact'>
+
+            <ContactPage />
+          </Route>
+          <Route>
+            <VarietiesListContainer />
+          </Route>
+        </Switch>
       </Router>
     </div>
   );
