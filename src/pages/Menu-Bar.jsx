@@ -100,11 +100,7 @@ export default function PersistentDrawerRight() {
     <div className={classes.root}>
       <CssBaseline />
       <AppBar
-        style={{
-          backgroundImage:
-            "url(https://www.transparenttextures.com/patterns/diagmonds-light.png)",
-          backgroundColor: "#48a899",
-        }}
+        style={{ backgroundColor: "#D9A462"}}
         position="fixed"
         className={clsx(classes.appBar, {
           [classes.appBarShift]: open,

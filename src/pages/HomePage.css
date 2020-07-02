@@ -1,53 +1,52 @@
-.main-container_homepage{
-    background-color: #48a899;
-   
-background-image: url("https://www.transparenttextures.com/patterns/diagmonds-light.png");
-
+.main-container_homepage {
+  background-color: #E3B966;
 }
-
-h1{
-    font-size: 3.2rem;
+.headers-homepage {
+  color: white;
+  text-align: left;
+  width: 20%;
 }
-h2{
-    width: 60%;
-}
-a:hover{
-    color: #f6ccc3;
-    font-weight: 800;
-}
-.wrapper-homepage{
-    display: flex;
-    justify-content: space-evenly;
-    padding: 100px 0px;
-}
-.headers-homepage{
-color: white;
-text-align: left;
+.headers-homepage__h1 {
+  font-size: 3.2rem;
 width: 40%;
 }
 
-.image-coffee-homepage {
-    position: relative;
-    right: 100px;
-    
+.headers-homepage__h2 {
+  font-weight: 350;
+  color: rgb(71, 64, 64);
+  width: 100%;
 }
+
+.wrapper-homepage {
+  display: flex;
+  justify-content: center;
+  padding: 100px 0px;
+  
+}
+
+
 @media only screen and (max-width: 600px) {
-    .headers-homepage{
-        font-size: 0.5em;
-        padding:0;
+  .headers-homepage__h1{
+    font-size: 2.2rem;
+    width: 90%;
+    text-align: center;
+    margin: 0 auto;
+  }
+  .headers-homepage{
+    width: 100%;
+  }
+  .wrapper-homepage {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+  }
+  .headers-homepage__h2 {
+    display: none;
     }
-    .wrapper-homepage{
-        display: flex;
-        flex-direction: column;
-        justify-content: center;
-    }
-    .headers-homepage > h2{
-       display: none;
-   }
-    .image-coffee-homepage{
-        width: 400px;
-        height: 300px;
-        position: static;
-      
-    }
+  .image-coffee-homepage {
+    width: 400px;
+    height: 300px;
+    position: static;
+  }
 }

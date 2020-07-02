@@ -1,0 +1,44 @@
+.main-container_contactpage{
+    background-color: #E3B966;
+}
+
+.headers-contactpage__h1{
+    font-size: 3.2rem;
+}
+
+.aboutpage__social-media-icon:hover{
+    color: #48a899;
+}
+.headers-contactpage{
+color: white;
+text-align: right;
+width: 40%;
+}
+.image-coffee-contactpage {
+    position: relative;
+    right: 100px;
+}
+.aboutpage__social-media-icon {
+    color: white;
+}
+@media only screen and (max-width: 600px) {
+   
+    .wrapper-contactpage{
+        display: flex;
+        flex-direction: column;
+    }
+
+    .headers-contactpage{
+        width: 90%;
+       
+        text-align: center;
+    }
+    
+    .image-coffee-contactpage{
+        display: flex;
+        width: 420px;
+        height: 300px;
+        margin: 0 auto;
+        right: 0;   
+    }
+}
