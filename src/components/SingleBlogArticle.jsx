@@ -21,16 +21,16 @@ const SingleBlogArticle = (props) => {
 
     if (fetchStatus === 'SUCCEED') {
         return (
-            <div className="main-container-blog-list">
+            <div className="main-container-blog-article">
                 <PersistenDrawerRight />
                 <div className='single-blog-article__wrapper'>
-                    <div className="blog-card">
-                        <img className="blog-image" alt="" src={singleBlogArticle.image} />
-                        <div className="info-blog-card">
-                            <h1>{singleBlogArticle.title}</h1>
-                            <h3 className="blog-article__author">{singleBlogArticle.author}</h3>
-                            <h3 className="blog-article__date">{singleBlogArticle.date}</h3>
-                            <p className="blog-article__text">{singleBlogArticle.text}</p>
+                    <div className="single-blog-card">
+                        <img className="single-blog-image" alt="" src={singleBlogArticle.image} />
+                        <div className="single-info-blog-card">
+                            <h1 className='single-blog-article__title'>{singleBlogArticle.title}</h1>
+                            <h3 className="single-blog-article__author">{singleBlogArticle.author}</h3>
+                            <h3 className="single-blog-article__date">{singleBlogArticle.date}</h3>
+                            <p className="single-blog-article__text">{singleBlogArticle.text}</p>
                         </div>
                     </div>
                 </div>
@@ -39,7 +39,7 @@ const SingleBlogArticle = (props) => {
     }
 
     return (
-        <div className='single-pokemon'>
+        <div className='single-blog-article'>
             Something went wrong.
 
             <pre>

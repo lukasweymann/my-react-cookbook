@@ -5,7 +5,7 @@
   font-family: Libre Franklin;
 }
 
-.blog-card{
+.single-blog-card{
   display: flex;
   margin: 50px 100px;
   padding: 10px;
@@ -13,14 +13,26 @@
   border-radius: 5px;
 }
 
-.blog-article__author, .blog-article__date {
-  margin: none !important;
-  font-weight: 700;
+.single-info-blog-card {
   text-align: left;
+  margin-left: 40px;
 }
 
-h1 {
+.single-blog-article__author, .single-blog-article__date {
+  font-weight: 200;
+  font-size: 16px;
+  text-align: left;
+  color: #3E2413;
+}
+
+.single-blog-article__title {
   font-size: 30px;
   font-weight: 500;
   text-transform: uppercase;
+  color: #3E2413;
+}
+
+.single-blog-article__text {
+  font-size: 18px;
+  color: #3E2413;
 }
