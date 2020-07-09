@@ -1,28 +1,90 @@
-import React from "react";
-import Button from "@material-ui/core/Button";
-
+import React, { useState } from "react";
 import "./ContactForm.css";
 
-function ContactForm() {
-  return (
-    <form action="mailto:lukas_weymann@hotmail.com" method="POST">
-      <input type="text" placeholder="Your name" name="name-contactform" />
-      <label>Name</label>
-      <input type="email" placeholder="Your e-mail" name="email-contactform" />
-      <label>Email</label>
-      <input
-        type="text"
-        placeholder="Enter the subject here"
-        name="email-subject"
-      />
-      <label>Subject</label>
+function ContactForm(props) {
+  const [name, setName] = useState(null);
+  const [email, setEmail] = useState(null);
+  const [subject, setSubject] = useState(null);
+  const [content, setContent] = useState(null);
 
-      <textarea type="text" name="email-content" />
-      <label>Your message</label>
-      <button type="submit" value="Send">
-        Send
-      </button>
-    </form>
+  function handleName(event) {
+    setName(event.target.value);
+  }
+
+  function handleEmail(event) {
+    setEmail(event.target.value);
+  }
+
+  function handleSubject(event) {
+    setSubject(event.target.value);
+  }
+
+  function handleContent(event) {
+    setContent(event.target.value);
+  }
+
+  function handleClick() {
+    props.hideFunction();
+  }
+
+  const handleSubmit = (event) => {
+    event.preventDefault();
+
+    const emailToSubmit = {
+      name,
+      email,
+      subject,
+      content,
+    };
+
+    fetch(`http://localhost:8080/mail`, {
+            method: 'POST',
+            body: JSON.stringify({ emailToSubmit }),
+           
+        })
+        
+};
+  
+  return (
+    <div className="contact-form-container">
+      <p className="x" onClick={handleClick}>
+        x
+      </p>
+      <form action="/" method="POST">
+        <input
+          onChange={handleName}
+          type="text"
+          placeholder="Your name"
+          name={name}
+        />
+        <label>Name</label>
+        <input
+          onChange={handleEmail}
+          type="email"
+          placeholder="Your e-mail"
+          name={email}
+        />
+        <label>Email</label>
+        <input
+          onChange={handleSubject}
+          type="text"
+          placeholder="Enter the subject here"
+          name={subject}
+        />
+        <label>Subject</label>
+
+        <textarea
+          onChange={handleContent}
+          type="text"
+          name={content}
+          rows="6"
+        />
+        <label>Your message</label>
+        <button onClick={handleSubmit} type="submit" value="Send">
+          SEND
+        </button>
+      </form>
+    </div>
   );
 }
 

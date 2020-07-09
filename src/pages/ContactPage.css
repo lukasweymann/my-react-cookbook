@@ -1,5 +1,6 @@
 .main-container_contactpage{
     background-color: #E3B966;
+   z-index: 0;
 }
 
 .wrapper-contactpage {
@@ -19,9 +20,11 @@ text-align: right;
 width: 40%;
 margin-top: 85px;
 }
-.image-coffee-contactpage {
-    
-   
+.contactform-formular{
+    z-index: 2;
+ position:relative;
+ right: 450px;
+
 }
 .aboutpage__social-media-icon {
     color: white;

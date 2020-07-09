@@ -5,6 +5,7 @@ import ContactPage from './pages/ContactPage';
 
 import EssentialsListContainer from './pages/Essentials';
 import VarietiesListContainer from './pages/Varieties';
+import AdminComposePage from './pages/AdminComposePage';
 import BlogRoutes from './BlogRoutes';
 import './App.css';
 import {
@@ -29,6 +30,9 @@ function App() {
           <Route path='/learn'>
             <BlogRoutes />
           </Route>
+          <Route path="/compose">
+          <AdminComposePage />
+        </Route>
           <Route path='/about'>
 
             <AboutPage />
@@ -37,9 +41,11 @@ function App() {
 
             <ContactPage />
           </Route>
+         
           <Route>
             <VarietiesListContainer />
           </Route>
+         
         </Switch>
       </Router>
     </div>
