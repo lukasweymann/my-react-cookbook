@@ -25,7 +25,7 @@ function Page404() {
       {["ESSENTIALS"].map((text, index) => (
         <Link
           to={"/" + text.toLowerCase()}
-          style={{ textDecoration: "none", color: "black" }}
+          style={{ textDecoration: "none", color: "rgb(0, 230, 230)" }}
         >
           <ListItem button key={text} style={{ marginLeft: "10px" }}>
             <ListItemText primary={text} />
@@ -36,18 +36,11 @@ function Page404() {
   );
 
   return (
-    <div className="main-container_homepage">
+    <div className="page404">
       <PersistenDrawerRight />
-      <div
-        className="wrapper-homepage"
-        style={{
-          fontWeight: "900",
-          backgroundImage: "url(../images/coffee.jpg )",
-          height: "100%",
-          width: "100%",
-        }}
-      >
-        <div className="headers-homepage" style={{ color: "rgb(122,104,98)" }}>
+      <div className="wrapper-homepage p404" style={{ paddingBottom: "300px" }}>
+        {/* <div style={{ color: "rgb(241, 208, 185)" }}> */}
+        <div style={{ color: "rgb(245, 226, 193)" }}>
           <h1>404 - Page not found</h1>
           <p style={{ marginBottom: "10px" }}>
             Something went wrong! Tea in the machine maybe. Coffee makes life so
