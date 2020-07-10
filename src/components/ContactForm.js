@@ -40,7 +40,7 @@ function ContactForm(props) {
     fetch(`http://localhost:8080/mail`, {
             method: 'POST',
             body: JSON.stringify({ emailToSubmit }),
-           
+            headers: { "Content-Type": "application/json" }
         })
         
 };
